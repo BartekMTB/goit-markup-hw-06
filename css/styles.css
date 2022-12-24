@@ -554,11 +554,23 @@ footer p {
   background-color: var(--brand-blue);
   fill: var(--brand-white);
 } */
+.newsletter-div {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
 
-.footer-input {
+.label-footer {
   width: 358px;
   height: 50px;
+}
 
+.footer-input {
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  background: var(--brand-background);
+  padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -576,21 +588,28 @@ footer p {
 }
 
 .footer-button {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 10px 0;
+  padding-left: 42px;
   width: 200px;
   height: 50px;
-
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
-
+  fill: var(--brand-white);
   color: #ffffff;
 }
+/* .footer-button svg {
+  vertical-align: middle;
+  margin-left: 24px;
+  display: inline;
+} */
 
 .visually-hidden {
   position: absolute;

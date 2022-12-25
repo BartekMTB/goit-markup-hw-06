@@ -56,13 +56,69 @@
           <button type="button" class="mainheader-button" data-modal-open>
             Zamów usługe
           </button>
-          <div class="backdrop-shadow is-hidden" data-modal>
+          <!-- <div class="backdrop-shadow is-hidden" data-modal> -->
+          <div class="backdrop-shadow" data-modal>
             <div class="modal">
               <button type="button" class="modal-btn" data-modal-close>
                 <svg class="x-icon" width="18px" height="18px">
                   <use href="./images/icons.svg#icon-close"></use>
                 </svg>
               </button>
+              <form
+                name="signup_form"
+                autocomplete="on"
+                novalidate
+                class="order-form"
+              >
+                <h3>Zostaw swoje dane w formularzu poniżej</h3>
+                <div>
+                  <p>Imie</p>
+                  <label>
+                    <input type="text" name="fname" />
+                  </label>
+                </div>
+
+                <div>
+                  <p>Telefon</p>
+                  <label>
+                    <input type="tel" name="phone" />
+                  </label>
+                </div>
+
+                <div>
+                  <p>E-mail</p>
+                  <label>
+                    <input type="email" name="e-mailo" />
+                  </label>
+                </div>
+
+                <div>
+                  <p>Komentarz</p>
+                  <label>
+                    <textarea
+                      name="feedback"
+                      rows="5"
+                      placeholder="Wprowadź text"
+                    ></textarea>
+                  </label>
+                </div>
+
+                <div>
+                  <label>
+                    <input type="checkbox" name="policy" value="policy" />
+                    <span
+                      >Oświadczam iż akceptuję
+                      <a class="policy-a" href="">Regulamin</a> i
+                      <a class="policy-a" href=""
+                        >Politykę Prywatności.</a
+                      ></span
+                    >
+                  </label>
+                </div>
+                <div>
+                  <button class="btn-send" type="submit">Wyślij</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -445,21 +501,30 @@
               </li>
             </ul>
           </div>
-          <div class="newsletter-div">
-            <div>
+
+          <form name="signup-form" autocomplete="on" novalidate>
+            <div class="newsletter-flex">
+              <div>
                 <p>Zapisz się do newslettera</p>
-                <form name="signup-form" autocomplete="on" novalidate>
-                  <label class="label-footer">
-                    <input class="footer-input" type="email" name="email" placeholder="E-mail"/>
-                  </label>
+                <label>
+                  <input
+                    class="footer-input"
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                  />
+                </label>
+              </div>
+
+              <div>
+                <button class="footer-button" type="submit">
+                  Zapisz się<svg width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-icon-send"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
-              <button class="footer-button" type="submit">
-                Zapisz się<svg width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
     </footer>

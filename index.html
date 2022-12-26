@@ -57,47 +57,61 @@
             Zamów usługe
           </button>
           <!-- <div class="backdrop-shadow is-hidden" data-modal> -->
-          <div class="backdrop-shadow" data-modal>
+          <div class="backdrop-shadow is-hidden" data-modal>
             <div class="modal">
               <button type="button" class="modal-btn" data-modal-close>
                 <svg width="18px" height="18px">
                   <use href="./images/icons.svg#icon-close"></use>
                 </svg>
               </button>
-              <form
-                name="signup_form"
-                autocomplete="on"
-                novalidate
-                class="order-form"
-              >
+              <form name="signup_form" autocomplete="on" class="order-form">
                 <h3>Zostaw swoje dane w formularzu poniżej</h3>
                 <div>
                   <p>Imie</p>
-                  <label
-                    ><svg class="inform-icon" width="18px" height="18px">
+                  <label>
+                    <input
+                      class="modal-input"
+                      type="text"
+                      name="fname"
+                      required
+                      pattern="[A-Za-z ]{1,32}"
+                      minlength="4"
+                    />
+                    <svg class="inform-icon" width="18px" height="18px">
                       <use href="./images/icons.svg#icon-person-black"></use>
                     </svg>
-                    <input type="text" name="fname" />
                   </label>
                 </div>
 
                 <div>
                   <p>Telefon</p>
-                  <label
-                    ><svg class="inform-icon" width="18px" height="18px">
+                  <label>
+                    <input
+                      class="modal-input"
+                      type="tel"
+                      name="phone"
+                      required
+                      pattern="[0-9 +]{1,32}"
+                      minlength="9"
+                    />
+                    <svg class="inform-icon" width="18px" height="18px">
                       <use href="./images/icons.svg#icon-phone-black"></use>
                     </svg>
-                    <input type="tel" name="phone" />
                   </label>
                 </div>
 
                 <div>
                   <p>E-mail</p>
-                  <label
-                    ><svg class="inform-icon" width="18px" height="18px">
+                  <label>
+                    <input
+                      class="modal-input"
+                      type="email"
+                      name="e-mailo"
+                      required
+                    />
+                    <svg class="inform-icon" width="18px" height="18px">
                       <use href="./images/icons.svg#icon-email"></use>
                     </svg>
-                    <input type="email" name="e-mailo" />
                   </label>
                 </div>
 
@@ -113,8 +127,18 @@
                 </div>
 
                 <div>
-                  <label>
-                    <input type="checkbox" name="policy" value="policy" />
+                  <label class="custom-chkbox">
+                    <input
+                      type="checkbox"
+                      name="policy"
+                      value="policy"
+                      required
+                    />
+
+                    <svg class="checkbox-icon" width="16px" height="15px">
+                      <use href="./images/icons.svg#icon-Vector"></use>
+                    </svg>
+
                     <span
                       >Oświadczam iż akceptuję
                       <a class="policy-a" href="">Regulamin</a> i
@@ -511,7 +535,7 @@
             </ul>
           </div>
 
-          <form name="signup-form" autocomplete="on" novalidate>
+          <form name="signup-form" autocomplete="on">
             <div class="newsletter-flex">
               <div>
                 <p>Zapisz się do newslettera</p>
@@ -521,6 +545,7 @@
                     type="email"
                     name="email"
                     placeholder="E-mail"
+                    required
                   />
                 </label>
               </div>
